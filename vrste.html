@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino plošče</title>
+    <link rel="stylesheet" type="text/css" href= "stil.css" />
+</head>
+<body>
+    <header>
+        <h1>Arduino plošče</h1>
+        <nav>
+            <ul>
+				<li class="dropdown">
+                    <a href="index.html" class="dropbtn">Domov</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#uvod">Uvod v Arduino</a>
+                        <a href="index.html#razlike">Razlike</a>
+                        <a href="index.html#delovanje">Delovanje Arduina</a>
+                    </div>
+                </li>
+                <li><a href="zgodovina.html">Zgodovina</a></li>
+                <li class="dropdown">
+                    <a href="vrste.html" class="dropbtn active">Arduino plošče</a>
+                    <div class="dropdown-content">
+						<a href="vrste.html#priključki">Priključki</a>
+                        <a href="vrste.html#nano">Arduino Nano</a>
+                        <a href="vrste.html#others">Ostale plošče</a>
+                    </div>
+                </li>
+				<li class="dropdown">
+                    <a href="uporaba.html" class="dropbtn">Uporaba</a>
+                    <div class="dropdown-content">
+                        <a href="uporaba.html#splošno">Področja uporabe</a>
+                        <a href="uporaba.html#izobraževanje">Izobraževanje</a>
+                    </div>
+                </li>
+				<li class="dropdown">
+					<a href="viri.html">Viri</a></li>
+			</ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+			<p> Arduino plošče so elektronska vezja, katerih ključni sestavni del je mikrokrmilnik, v večini iz družine AVR, ki jih je razvijo podjetje Atmel. Arduino okolje ima več različnih Arduino krmilnikov. Najpogostejši izmed njih so Arduino Nano, Arduino Uno, Arduino Mikro in Arduino Mega.</p>
+			<article id="priključki">
+				<div class="anchor" id="priključki-anchor"></div>
+					<h2>Priključki</h2>
+						<p> Pomemben del Arduino krmilnikov so priključki, z nekaterimi izmed njih lahko krmilimo, z drugimi pa poleg tega tudi odčitavamo analogna stanja.</p>
+						<p> Priključke na Arduino vezjih lahko razdelimo po njihovih funkcijah:</p>
+							<ul>
+								<li><u>digitalni izhod</u>(omogočajo digitalno krmiljenje)</li>
+								<li><u>digitalni vhod</u>(omogočajo digitalno vzorčevanje)</li>
+								<li><u>analogni vhod</u>(omogočajo analogno vzorčevanje napetosti)</li>
+							</ul>
+						<p> Priključka, ki nam bi omogočal analogno krmiljenje ni.</p>
+						<p> Priključek, ki nam omogoča digitalno krmiljenje in vzorčevanje, lahko v določenem trenutko uporabljamo le za krmiljenje ali vzorčenje. Torej priključek ne more sočasno izvajati obeh nalog.</p>
+						<p> Če priključek uporabljamo v funkciji digitalnega izhoda, lahko programsko določimo napetostni potencial na priključku. Le ta je lahko v obliki visokega (logična 1 oziroma približno 5V) ali nizkega (logična 0, 0V) napetostnega stanja. Tak priključek ima takrat funkcijo izhodne enote glede na vezje Arduino.</p>
+						<p> Kadar priključek uporabljamo kot digitalni vhod, takrat lahko programsko ugotovimo, ali je priključek priključen na višji ali nižji napetostni potencial. V kolikor lahko priključek uporabimo kot analogni vhod, to pomeni, da lahko ločimo med več različnimi vrednostmi napetostnega potenciala in ne le med dvema, kot je to mogoče pri digitalnem vhodu. Če uporabljamo Arduino Nano, lahko razlikujemo med 1024 različnimi stanji napetostnih potencialov v intervalnem območju med 0 in 5V. </p>
+						<p> Kakšno funkcijo naj priključek izvaja, določimo programsko.</p>
+						<img src= "slike/prikljucki.png"><br>
+						<div class="desc">Primeri različnih funkcij priključkov. Vir: Canva, (2024)</div>
+						<h4>Štetje priključkov</h4>
+							<ul>
+								<li>Pri vseh integriranih vezjih in elektronskih vezjih Arduino je pomembno, da znamo šteti njihove priključke, saj jih le tako lahko ustrezno vključimo v ožičeno elektroniko.</li>
+								<li>Pri elektronskih vezjih Arduino so priključki še dodatno označeni, pri ostalih mikrokrmilnikih in krmilnikih navadno temu ni tako, zaradi česar obstaja dogovorjen način štetja priključkov.</li>
+								<li>Vedeti moramo kako je mikrokrmilnik pravilno obrnjen, pri vezjih Arduino je običajno zgornji del ravno nasproti priključka za napajanje, pri mikrokrmilnikih pa je navadno ta del označen z na ohišju izdolbenim polkrogom ali krogom.</li>
+								<li>Ko imamo pravilno postavljeno vezje ali mikrokrmilnik, lahko pričnemo s štetjem. V levem zgornjem kotu je priključek 1, pod njim priključek 2 in tako do konca tega roba. S štetjem nadaljujemo s priključkom desno spodaj vse do vrha.</li>
+							</ul>
+            </article>
+            <article id="nano">
+				<div class="anchor" id="nano-anchor"></div>
+					<h2>Arduino Nano</h2>
+						<p>Arduino Nano je majhna, kompaktna plošča, primerna za manjše projekte. Če si pogledamo njenje priključke imajo veliko različnih namenov, eni so namenjeni digitalnim funkcijam, drugi analognim, spet drugi napajalnim napetostnim potencialom (5V, 3.3V, GND, VIN). Ima tudi priključe z posebnimi funkcijami, kot je vnovčni zagon (RST) in ima priključke za komunikacijo. Arduino Nano je opremljen tudi z indikacijskimi LED diodami, ki signalizirajo napajalno napetost, UART komunikacijo in izhodno stanje priključka D13.</p>
+						<img src= "slike/arduinoNano.png"><br>
+						<div class="desc">Wikimedia Commons. (2019). Arduino Nano pinout. https://commons.wikimedia.org/wiki/File:Arduino-nano-pinout.png</div>
+            </article>
+            <article id="others">
+				<div class="anchor" id="others-anchor"></div>
+					<h2>Ostale plošče</h2>
+						<p>Arduino ima različne plošče, od najstarejših do najnovejših. Vsaka ploščica ima mikrokrmilnik (npr. Arduino Uno ima ATmega328), vhodne in izhodne pine, napajalne priključke in različne druge komponente. Med seboj pa se razlikujejo glede na velikost, število priključkov, mikrokrmilnik, zmogljivost in funkcionalnost. Vezje Arduino Mikro je najmanjše in ima tudi najmanj priključkov, medtem ko je Arduino Mega največje in ima največ priključkov.</p>
+						<img src= "slike/razlicniKrmilniki.png"><br>
+						<div class="desc">Flikr. (2012). Arduino microcontroller / Arduino Uno microcontroller ATmega328 / Arduino Mega 2560 / Arduino Nano ATmega328 / Arduino Pro Mini ver.3.3V ATmega328 /.https://www.flickr.com/photos/arakus/8077218145</div>
+            </article>
+        </section>
+    </main>
+	<footer>
+			<p> CC BY-NC-SA </p>
+			<p> kozoja, junij 2024 </p>
+	</footer>
+</body>
+</html>

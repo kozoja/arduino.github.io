@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="desription" content="Kratek opis vsebine">
+		<meta name="keyword" content="Arduino, Arduino Nano, mikrokrmilnik, krmilnik">
+		<meta name="author" content="Zoja Kozin">
+		<title>Arduino</title>
+		<link rel="stylesheet" type="text/css" href= "stil.css" />
+
+	</head>
+	<body>
+		<header>
+			<h1> ARDUINO </h1>
+		<nav>
+			<ul>
+				<li class="dropdown">
+                    <a href="index.html" class="dropbtn active">Domov</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#uvod">Uvod v Arduino</a>
+						<a href="index.html#delo">Rokovanje z Arduinom</a>
+                        <a href="index.html#razlike">Razlike</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="zgodovina.html">Zgodovina</a></li>
+                <li class="dropdown">
+                    <a href="vrste.html" class="dropbtn">Arduino plošče</a>
+                    <div class="dropdown-content">
+                        <a href="vrste.html#priključki">Priključki</a>
+                        <a href="vrste.html#nano">Arduino Nano</a>
+                        <a href="vrste.html#others">Ostale plošče</a>
+                    </div>
+                </li>
+				<li class="dropdown">
+                    <a href="uporaba.html" class="dropbtn">Uporaba</a>
+                    <div class="dropdown-content">
+                        <a href="uporaba.html#splošno">Področja uporabe</a>
+                        <a href="uporaba.html#izobraževanje">Izobraževanje</a>
+                    </div></li>
+				<li class="dropdown">
+					<a href="viri.html">Viri</a></li>
+			</ul>
+		</nav>
+		</header>
+		<main>
+			<section>
+				<article id="uvod">
+					<div class="anchor" id="uvod-anchor"></div>
+						<h2>Uvod v Arduino</h2>
+							<p>Arduino je odprtokodno programljivo elektronsko okolje za izdelavo elektronskih projektov. Sestavljeno je iz strojne opreme (različne vrste plošč) in programske opreme (Arduino IDE), ki omogoča programiranje plošč. Arduino je zasnovan tako, da je enostaven za uporabo in dostopen tako začetnikom kot tudi izkušenim inženirjem.</p>
+							<ol>
+								  <li><b>Strojna oprema (Hardware):</b></li>
+									<ul>
+										<li><u>Arduino plošče</u> (Boards):<br>Arduino plošče oziroma Arduino krmilniki so elektronska vezja, katerih ključni sestavni del je mikrokrminik.<br>Obstaja veliko vrst Arduino plošč, npr. Arduino Uno, Arduino Nano, Arduino Mega, itd. Vsaka ploščica ima mikrokrmilnik (npr. Arduino Uno ima ATmega328), vhodne in izhodne pine, napajalne priključke in različne druge komponente.</li>
+										<li><u>Senzorji in aktuatorji</u>:<br>Senzorji zaznavajo različne okoljske spremembe (npr. svetlobo, temperaturo, gibanje).<br> Aktuatorji pa izvajajo dejanja (npr. motorji, LED diode,...).</li>
+									</ul>
+								  <li><b>Programska oprema (Software):</b><br></li>
+									<ul>
+										<li><u>Arduino IDE</u> (Integrated Development Enviroment): Je odprtokodno programsko okolje (program), ki uporalja C++ programski jezik, ki je eden izmed najširše uporabljenih. Programsko okolje Arduino IDE nam omogoča pisanje, urejanje in nalaganje programov na Arduino ploščico. Omogoča nam tudi interakcijo in prikaz informacij preko serijske komunikacije z Ardunio krmilnikom. Gre torej za dvosmerno komunikacijo med računalnikom in krmilnikom Arduino, na katerega je lahko priključeno tudi drugo elektronsko vezje.</li>
+									</ul>
+							</ol>
+							<img src= "slike/komunikacija.png"><br>
+							<div class="desc">Prikaz dvosmerne komunikacije. Vir: Canva, (2024)</div>
+				</article>
+				<article id="delo">
+					<div class="anchor" id="delo-anchor"></div>
+						<h2>Rokovanje z Arduinom</h2>
+							<p>Arduino se uporablja za številne projekte, ki vključujejo robotiko, avtomatizacijo, IoT (Internet of Things), umetniške instalacije, izdelavo prototipov in še več. Za to pa je potrebno poznati osnovne korake za delo z Arduinom. Le te pa so:</p>
+								<ol>	
+									<li><u>Namestitev Arduino IDE</u>: Prenesete in namestite arduino IDE iz uradne spletne strani <a href="https://www.arduino.cc/en/software" target="_blank">Arduino</a></li>
+									<li><u>Pisanje kode</u> (sketch): V Arduino IDE napišite kodo, ki določa, kako naj Arduino upravlja z vhodnimi in izhodnimi signali.</li>
+									<li><u>Priključitev Arduino krmilnika</u>: Arduino krmilnik povežete z računalnikom preko USB kabla.</li>
+									<li><u>Prenos kode na krmilnik</u>: Kodo preverite nato naložite na Arduino krmilnik preko USB kabla.</li>
+									<li><u>Izvajanje projekta</u>: Ko je koda naložena, Arduino začne izvajati določene naloge glede na napisan program.</li>
+								</ol>
+				</article>
+				<article id="razlike">
+					<div class="anchor" id="razlike-anchor"></div>
+						<h2>Razlike med mikrokrmilniki in krmilniki</h2>
+						<div class="row">
+							<p>Krmilniki in mikrokrmilniki imajo različne vloge in strukture, vendar sta oba ključna za avtomatizacijo in nadzor v različnih aplikacijah. Krmilniki so bolj splošni in lahko vključujejo različne komponente, medtem ko so mikrokrmilniki specializirani računalniški sistemi na čipu, ki se uporabljajo za specifične naloge v vgrajenih sistemih.</p>
+						 <div class="column">
+							<h4>Krmilniki</h4>
+								<p>Krmilnik je naprava ali komponenta, ki upravlja in nadzoruje delovanje druge naprave ali sistema. Uporablja se v različnih aplikacijah, od industrijskih procesov do avtomatizacije doma. Krmilniki so mehanski, električni ali programski. Lahko vključujejo različne komponente, kot so senzorji, akturtorji, releji, stikala in druge mehanske ali elektronske naprave. Pogosto uporabimo namensko strojno opremo, ki je specifična za določeno aplikacijo. Krmilniki so lahko zelo kompleksni in dragi, še posebej v industrijskih aplikacijah. Cena in kompleksnost pa sta precej odvisni od specifične aplikacije in zahtev.</p>
+						 </div> 
+							<div class="column">
+								<h4>Mikrokrmilniki</h4>
+								<p>Mikrokrmilnik je tip krmilnika, ki vsebuje celoten računalniški sistem na enem čipu. Mikrokrmilniki vsebujejo na enem čipu integrirane komponente: CPU, RAM, ROM, EEPROM, časovnike, ADC in serijske komunikacijske vmesnike. Zasnovani so za nizko porabo energije in kompaktno velikost. Mikrokrmilnik uporabljajo v vgrajenih sistemih, kjer nadzorujejo specifične funkcije naprave. So relativno poceni in enostavni za uporabo, kar jih naredi priljubljene za širok spekter DIY projektov in komercialnih izdelkov. Cena je običajno nizka zaradi visoke stopnje integracije komponent na enem čipu.</p>
+							</div>
+						</div>
+				</article>
+			</section>
+		</main>
+		<footer>
+			<p> CC BY-NC-SA </p>
+			<p> kozoja, junij 2024 </p>
+		</footer>
+	</body>
+</html>

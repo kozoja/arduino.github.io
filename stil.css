@@ -1,0 +1,169 @@
+body { /* splošno - telo */
+  font-family: Arial; /* pisava arial za celotno stran */
+  margin: 0;
+  padding: 0;
+  background-color: lightblue; /* ozadje celotne strani je svetlo modro */
+  border-top:10px;
+  display: flex;
+  flex-direction: column;
+  min-height:100vh; /*  minimalno višino telesa na 100% višine vidnega okna */
+  
+}
+
+header { /* glava strani*/
+    color: white; /* barva besedila je bela*/
+    padding: 10px 0 0 0; /*zgornja obroba 10px*/
+    text-align: center; /*sredinska poravnava besedila*/
+	background-color: lightblue; /* ozadje svetlo modro */
+	width: 100%; /*širina glave je 100% širine okna*/
+	position: fixed; /*glava je fiksirana na vrhu strani*/
+	top: 0;
+	left: 0;
+	z-index: 1000; /* poskrbi da je glava nad vsemi drugimi elementi */
+}
+
+header h1 {
+    margin: 20px auto 20px auto; ; /*zgornje in spodnje obrobe na 20px in samodejno poravna levo-desno*/
+	color: #349CF7;
+}
+
+nav {
+  width: 100%;
+  background-color: white; /* Dodaj ozadje, da se loči od vsebine */
+  position: fixed; /* navigacija je fiksirana na vrhu nad ostalimi stvarmi*/
+  top: 80px;
+  left: 0;
+  z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none; /*odstrani oznake seznama*/
+	padding:10px; /*notranji rob 10px*/
+	margin:0 2px 0 2px; /*obroba*/
+	border-top: 2px solid #349CF7; /*nastavi zgornjo obrobo 1px in barvo*/
+    border-bottom: 2px solid #349CF7; /*nastavi podobno kot vrstica pred tem le da je spodnja obroba*/
+}
+
+nav ul li {
+	border-right: 2px solid #349CF7; /*doda desni rob*/
+	padding: 0 30px; /*doda notranja robova na levi in desni*/
+    display: inline; /*postavke so prikazane v vrstici*/
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none; /*odstrani podčrtavanje*/
+	font-size: 20px; /*velikost pisave 20px*/
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /*doda podčrtavanje ob premiku miške na povezavo*/
+}
+
+nav ul li a.active { /*aktivne povezave*/
+	background-color: #349CF7;
+	padding: 11px 16px;
+	border: 2px solid;
+    border-radius: 5px; /*zaobli robove*/
+}
+/*spustni meni*/
+.dropdown { /*nastavi relativno pozicijo in prikaz v vrstici*/
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content { /*skrit vsebinski element, ki se pokaže ob premiku miške na dropdown*/
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*doda senco vsebinskemu elementu*/
+	padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: lightblue;
+}
+
+.anchor {
+  display: block;
+  visibility: hidden;
+  height: 120px; 
+  margin-top: -140px; /* sidro prilagoden na visino fiksirane glave in navigacije */
+}
+
+main {
+    padding: 140px 8% 2% 8%;
+	background-color: white;
+	flex: 1; /*glavni del zavzame preostali prostor v flexbox postavitvi*/
+}
+
+main li{
+	margin-bottom: 10px;
+}
+
+section h2,h4 {
+    color: #333;
+	padding-top: 2%
+}
+
+section p {
+    line-height: 1.6; /*visina vrstice*/
+}
+
+section ol li{
+	line-height: 1.6;	
+}
+
+section ol li ul li{
+	line-height: 1.6;	
+}
+h4{
+	text-align: center;
+}
+
+div.desc{
+	font-size: 12px;
+	padding: 15px;
+	text-align: center;	
+}
+.column {
+  float: left; /*plava levo*/
+  width: 44%; /*širina ene kolone je 44%*/
+  padding: 0 25px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+img {
+	display: block;
+    margin: 0 auto; 
+	max-height: 400px;
+	max-width:100%;
+}
+
+footer {
+  color: black;
+  font-family: Arial;
+  font-size: 15px;
+  text-align: center;
+  border-top: 2px solid #349CF7;
+}
+
